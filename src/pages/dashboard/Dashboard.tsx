@@ -4,6 +4,8 @@ import {Header} from "./layouts/header/Header";
 import {SideBarLeft} from "./layouts/asides/sideBarLeft/SideBarLeft";
 import {SideBarRight} from "./layouts/asides/sideBarRight/SideBarRight";
 import {Breadcrumbs} from "./layouts/sections/breadcrumbs/Breadcrumbs";
+import {FoodFilter} from "./layouts/sections/foodFilter/FoodFilter";
+import {ProductList} from "./layouts/sections/productList/ProductList";
 
 export const Dashboard = () => {
     return (
@@ -12,6 +14,8 @@ export const Dashboard = () => {
             <Grid>
                 <SideBarLeft/>
                 <Breadcrumbs/>
+                <FoodFilter/>
+                <ProductList/>
                 <SideBarRight/>
             </Grid>
        </Container>
@@ -30,7 +34,7 @@ const Grid = styled.div`
     grid-template-rows: auto auto 1fr;
     grid-template-areas: 
         "sideL  brc sideR"
-        "sideL searchBar sideR"
-        "sideL main sideR";
+        "sideL filter sideR"
+        "sideL productList sideR";
 `
 
