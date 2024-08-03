@@ -63,7 +63,7 @@ export const SideBarLeft = () => {
                 <ul>
                     <FlexWrapper direction="column" gap="12px">
                         {categories.map((category, index) => (
-                            <li>
+                            <li key={index}>
                                 <a href="#">
                                     <FlexWrapper direction="column" gap="8px" alignItems="center">
                                         <Icon {...category.icon}/>
