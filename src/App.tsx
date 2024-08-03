@@ -1,11 +1,13 @@
 import React from 'react';
-import {Login} from "./pages/Login/Login";
+import {Login} from "./pages/login/Login";
+import {Dashboard} from "./pages/dashboard/Dashboard";
 
 
 function App() {
   return (
     <>
-      <Login/>
+      {/*<Login/>*/}
+        <Dashboard/>
     </>
   );
 }

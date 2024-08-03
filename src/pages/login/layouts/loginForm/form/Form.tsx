@@ -12,7 +12,7 @@ export const Form = () => {
             <Label>Password</Label>
             <Field id="password" name="password" type="password" icon="lock-close" placeholder="Enter password"/>
             <Link href="#">Forgot password?</Link>
-            <Button type="submit" primary={true} padding="100px">Running order</Button>
+            <Button type="submit" primary={true} padding="12px 100px">Running order</Button>
         </StyledForm>
     );
 };

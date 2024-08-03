@@ -2,8 +2,8 @@ import styled, {css} from "styled-components";
 import {theme} from "../styles/Theme";
 
 type ButtonPropsType = {
-    bgColor?: string,
-    color?: string,
+    backColor?: string,
+    textColor?: string,
     primary?: boolean,
     outline?: boolean,
     padding?: string,
@@ -16,11 +16,17 @@ export const Button = styled.button<ButtonPropsType>`
     font-family: Poppins, sans-serif;
     border-radius: 52px;
     ${props => props.primary && css`
-        background-color: ${props.bgColor || theme.colors.button.background.primary};
-        color: ${props.color || theme.colors.button.text.primary};
+        background-color: ${props.backColor || theme.colors.button.background.primary};
+        color: ${props.textColor || theme.colors.button.text.primary};
+        border: none;
+    `}
+
+    ${props => props.outline && css`
+        border: 1px solid ${props.backColor || theme.colors.background.primary};
+        background-color: transparent;
+        color: ${props.textColor || theme.colors.button.text.primary};
     `}
     
-    padding: 12px ${props => props.padding || "0"};
-    border: none;
+    padding: ${props => props.padding || "12px 0"};
     cursor: pointer;
 `
