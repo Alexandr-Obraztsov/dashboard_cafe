@@ -9,16 +9,14 @@ import {ProductList} from "./layouts/sections/productList/ProductList";
 
 export const Dashboard = () => {
     return (
-       <Container>
+        <Grid>
             <Header/>
-            <Grid>
-                <SideBarLeft/>
-                <Breadcrumbs/>
-                <FoodFilter/>
-                <ProductList/>
-                <SideBarRight/>
-            </Grid>
-       </Container>
+            <SideBarLeft/>
+            <Breadcrumbs/>
+            <FoodFilter/>
+            <ProductList/>
+            <SideBarRight/>
+        </Grid>
     );
 };
 
@@ -30,11 +28,15 @@ const Container = styled.div`
 
 const Grid = styled.div`
     display: grid;
-    height: 100%;
-    grid-template-rows: auto auto 1fr;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-columns: auto 1fr 1fr;
     grid-template-areas: 
+        "header header header"
         "sideL  brc sideR"
         "sideL filter sideR"
         "sideL productList sideR";
+
 `
 

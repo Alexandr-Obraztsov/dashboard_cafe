@@ -41,6 +41,7 @@ const Photo = styled.img`
 `
 
 const StyledHeader = styled.header`
+    grid-area: header;
     padding: 16px 24px;
     background-color: ${theme.colors.background.primary};
     border: 1px solid ${theme.colors.background.secondary};

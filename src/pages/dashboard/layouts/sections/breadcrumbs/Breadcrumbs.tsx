@@ -21,7 +21,9 @@ export const Breadcrumbs = () => {
 
 const StyledBreadcrumbs = styled.section`
     grid-area: brc;
-    background-color: lightgreen;
+    padding: 8px 16px;
+    background-color: ${theme.colors.background.primary};
+    border-bottom: 1px solid ${theme.colors.background.secondary};
     
     a{
         color: ${theme.colors.text.accent};
