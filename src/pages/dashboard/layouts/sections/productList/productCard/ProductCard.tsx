@@ -21,10 +21,14 @@ export const ProductCard = (props: ProductCardPropsType) => {
     );
 };
 
-const StyledProductCard = styled.article`
+const StyledProductCard = styled.button`
+    font: inherit;
+    border: none;
+    outline: none;
     border-radius: 16px;
     padding: 12px 8px;
     background-color: ${theme.colors.background.primary};
+    cursor: pointer;
 `
 
 const Name = styled.h3`
