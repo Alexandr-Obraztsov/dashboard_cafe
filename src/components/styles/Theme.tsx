@@ -11,6 +11,7 @@ export const theme = {
             secondary: "#E4E4E4",
             tertiary: "#F8F9FD",
             accent: "#FF5C00",
+            page: "#F5F5F5",
         },
 
         button: {

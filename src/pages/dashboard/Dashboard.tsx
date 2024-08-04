@@ -20,12 +20,6 @@ export const Dashboard = () => {
     );
 };
 
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-`
-
 const Grid = styled.div`
     display: grid;
     height: 100vh;
@@ -37,6 +31,10 @@ const Grid = styled.div`
         "sideL  brc sideR"
         "sideL filter sideR"
         "sideL productList sideR";
+
+    ::-webkit-scrollbar {
+        width: 0;
+    }
 
 `
 
