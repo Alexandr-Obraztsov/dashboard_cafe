@@ -38,7 +38,7 @@ const StyledIconButton = styled.a<IconButtonPropsType>`
         content: "";
         display: inline-block;
         border: 1px solid ${props => props.bgColor};
-        background-color: ${props => props.outline ? props.bgColor : "transparent"};
+        background-color: ${props => !props.outline ? props.bgColor : "transparent"};
         width: 36px;
         height: 36px;
         border-radius: 50%;

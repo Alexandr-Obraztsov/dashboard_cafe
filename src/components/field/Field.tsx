@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {theme} from "../styles/Theme";
 import Icon from "../icon/Icon";
 import {FlexWrapper} from "../FlexWrapper";
@@ -7,17 +7,29 @@ import {FlexWrapper} from "../FlexWrapper";
 type FieldPropsType = {
     type?: string,
     name?: string,
-    icon?: string,
+    leftIcon?: {
+        name: string,
+        width: string,
+        height: string
+    },
+    rightIcon?: {
+        name: string,
+        width: string,
+        height: string
+    }
     placeholder?: string,
     id?: string
 }
 
-const Field = (props: FieldPropsType) => {
+export const Field = (props: FieldPropsType) => {
     return (
         <Label>
-            <FlexWrapper alignItems="center">
-                {props.icon && <Icon name={props.icon}/>}
-                <Input {...props}/>
+            <FlexWrapper alignItems="center" justifyContent="space-between">
+                <FlexWrapper alignItems="center">
+                    {props.leftIcon && <Icon {...props.leftIcon}/>}
+                    <Input {...props}/>
+                </FlexWrapper>
+                {props.rightIcon && <Icon {...props.rightIcon}/>}
             </FlexWrapper>
         </Label>
     );
@@ -32,19 +44,19 @@ const Label = styled.label`
     border: 1px solid ${theme.colors.background.secondary};
 `
 
-const Input = styled.input`
+const Input = styled.input<FieldPropsType>`
     font-family: Poppins, sans-serif;
     height: 100%;
+    width: 100%;
     border: none;
     background-color: transparent;
     outline: none;
-    margin-left: 10px;
     font-size: 16px;
     color: ${theme.colors.text.primary};
+    ${props => props.leftIcon && css`margin-left: 10px;`}
     
     &::placeholder {
-        color: ${theme.colors.text.secondary};
+        color: #C2C2C2;
     }
 `
 
-export default Field;

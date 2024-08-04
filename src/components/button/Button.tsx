@@ -27,6 +27,7 @@ export const Button = styled.button<ButtonPropsType>`
         color: ${props.textColor || theme.colors.button.text.primary};
     `}
     
+    
     padding: ${props => props.padding || "12px 0"};
     cursor: pointer;
 `

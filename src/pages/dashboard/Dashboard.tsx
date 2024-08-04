@@ -31,7 +31,7 @@ const Grid = styled.div`
     height: 100vh;
     width: 100vw;
     grid-template-rows: auto auto auto 1fr;
-    grid-template-columns: auto 1fr 1fr;
+    grid-template-columns: auto 1fr 360px;
     grid-template-areas: 
         "header header header"
         "sideL  brc sideR"
