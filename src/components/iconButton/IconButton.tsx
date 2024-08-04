@@ -27,24 +27,14 @@ const StyledIconButton = styled.a<IconButtonPropsType>`
     cursor: pointer;
     
     div {
-        height: ${props => props.height};
-    }
-    
-    div,svg {
-        position: relative;
-    }
-    
-    div::before {
-        content: "";
-        display: inline-block;
-        border: 1px solid ${props => props.bgColor};
-        background-color: ${props => !props.outline ? props.bgColor : "transparent"};
         width: 36px;
         height: 36px;
+        border: 1px solid ${props => props.bgColor};
+        background-color: ${props => !props.outline ? props.bgColor : "transparent"};
         border-radius: 50%;
-        transform: translate(-50%, -50%);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-    };
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
 `

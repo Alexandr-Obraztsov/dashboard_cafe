@@ -21,6 +21,7 @@ export const Dashboard = () => {
 };
 
 const Grid = styled.div`
+    filter: blur(2px) brightness(0.9);
     display: grid;
     height: 100vh;
     width: 100vw;

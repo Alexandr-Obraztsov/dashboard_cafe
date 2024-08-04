@@ -43,6 +43,7 @@ const StyledFoodFilter = styled.section`
     grid-area: filter;
     display: flex;
     border-bottom: 1px solid ${theme.colors.background.secondary};
+    background-color: ${theme.colors.background.primary};
     
     label {
         border-right: 1px solid ${theme.colors.background.secondary};
