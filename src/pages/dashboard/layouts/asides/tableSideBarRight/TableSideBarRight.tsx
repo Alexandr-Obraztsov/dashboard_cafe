@@ -2,12 +2,17 @@ import React from 'react';
 import styled from "styled-components";
 import {theme} from "../../../../../components/styles/Theme";
 import {FlexWrapper} from "../../../../../components/FlexWrapper";
+import {PlaceList} from "./PlaceList";
+
+const places = [
+    6, 4
+]
 
 export const TableSideBarRight = () => {
     return (
         <StyledTableSideBarRight>
             <FlexWrapper direction="column" gap="24px">
-
+                {places.map((count, index) => <PlaceList count={count}/>)}
             </FlexWrapper>
         </StyledTableSideBarRight>
     );
@@ -16,16 +21,5 @@ export const TableSideBarRight = () => {
 const StyledTableSideBarRight = styled.aside`
     background-color: ${theme.colors.background.page};
     grid-area: sideR;
-
-    ul {
-        counter-reset: place;
-    }
-
-    li {
-        counter-increment: place 1;
-    }
-
-    li::after {
-        content: counter(place);
-    }
+    overflow-y: auto;
 `
