@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import {FlexWrapper} from "../FlexWrapper";
-import {theme} from "../styles/Theme";
 import {Filter} from "./filter/Filter";
 
 

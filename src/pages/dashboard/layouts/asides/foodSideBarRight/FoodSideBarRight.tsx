@@ -6,7 +6,7 @@ import {CustomerInformation} from "./customerInformation/CustomerInformation";
 import {Orders} from "./orders/Orders";
 import {OrderSummary} from "./orderSummary/OrderSummary";
 
-export const SideBarRight = () => {
+export const FoodSideBarRight = () => {
     return (
         <StyledSideBarRight>
             <Tabs/>

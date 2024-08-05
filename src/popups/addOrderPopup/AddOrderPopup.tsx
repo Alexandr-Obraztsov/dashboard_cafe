@@ -9,6 +9,8 @@ import {theme} from "../../components/styles/Theme";
 import {AdditionalMenu} from "./additionalMenu/AdditionalMenu";
 import {Button} from "../../components/button/Button";
 import {FlexWrapper} from "../../components/FlexWrapper";
+import {TextArea} from "../../components/textarea/TextArea";
+import {Label} from "../../components/Label";
 
 type AddOrderPopupPropsType = {
     order: {
@@ -39,10 +41,10 @@ export const AddOrderPopup = (props: AddOrderPopupPropsType) => {
                     <AdditionalMenu items={props.additionals}/>
                 </Additional>
                 <Form>
-                    <label>
+                    <Label>
                         Add note
-                        <Textarea placeholder="Type your note here..."></Textarea>
-                    </label>
+                        <TextArea placeholder="Type your note here..."></TextArea>
+                    </Label>
                 </Form>
                 <Footer>
                     <FlexWrapper direction="column" gap="4px">Total<span>$ {props.resultPrice}</span></FlexWrapper>
@@ -78,32 +80,6 @@ const Additional = styled.div`
 
 const Form = styled.form`
     margin-top: 24px;
-
-    label {
-        font-weight: 400;
-        font-size: 12px;
-        color: ${theme.colors.text.secondary};
-        margin-bottom: 4px;
-    }
-`
-
-const Textarea = styled.textarea`
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: ${theme.colors.text.primary};
-    display: block;
-    resize: none;
-    height: 140px;
-    width: 100%;
-    border: 1px solid ${theme.colors.background.secondary};
-    border-radius: 12px;
-    padding: 12px;
-    outline: none;
-
-    ::placeholder {
-        color: ${theme.colors.text.secondary};
-    }
 `
 
 const Footer = styled.div`

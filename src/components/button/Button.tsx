@@ -15,6 +15,7 @@ export const Button = styled.button<ButtonPropsType>`
     font-size: 16px;
     font-family: Poppins, sans-serif;
     border-radius: 52px;
+    
     ${props => props.primary && css`
         background-color: ${props.backColor || theme.colors.button.background.primary};
         color: ${props.textColor || theme.colors.button.text.primary};
@@ -22,9 +23,9 @@ export const Button = styled.button<ButtonPropsType>`
     `}
 
     ${props => props.outline && css`
-        border: 1px solid ${props.backColor || theme.colors.background.primary};
+        border: 1px solid ${props.backColor || theme.colors.background.accent};
         background-color: transparent;
-        color: ${props.textColor || theme.colors.button.text.primary};
+        color: ${props.textColor || theme.colors.button.text.accent};
     `}
     
     

@@ -57,7 +57,7 @@ const categories = [
 ]
 
 
-export const SideBarLeft = () => {
+export const FoodSideBarLeft = () => {
     return (
         <StyledSideBarLeft>
             <nav>

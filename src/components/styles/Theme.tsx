@@ -26,6 +26,13 @@ export const theme = {
                 tertiary: "#E4E4E4",
                 fourth: "#19191C",
             }
+        },
+
+        tables: {
+            available: "#3395F0",
+            reserved: "#FF5C00",
+            billed: "#13C91B",
+            availableSoon: "#F0B433",
         }
     }
 }

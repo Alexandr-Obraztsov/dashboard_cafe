@@ -7,6 +7,7 @@ import {AddOrderPopup} from "./popups/addOrderPopup/AddOrderPopup";
 import food1 from "./assets/images/dashboard/food1.png";
 import food2 from "./assets/images/dashboard/food2.png";
 import food3 from "./assets/images/dashboard/food3.png";
+import {AddNotePopup} from "./popups/addNotePopup/AddNotePopup";
 
 
 const addOrderPopupData = {
@@ -42,8 +43,9 @@ function App() {
     return (
         <>
             {/*<Login/>*/}
-            <Dashboard/>
-            <AddOrderPopup {...addOrderPopupData}/>
+            <Dashboard page="select table"/>
+            {/*<AddOrderPopup {...addOrderPopupData}/>*/}
+            {/*<AddNotePopup/>*/}
         </>
     );
 }
