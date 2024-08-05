@@ -9,6 +9,7 @@ import {ProductList} from "./layouts/sections/productList/ProductList";
 import {TableSideBarRight} from "./layouts/asides/tableSideBarRight/TableSideBarRight";
 import {TableList} from "./layouts/sections/tableList/TableList";
 import {TableFilter} from "./layouts/sections/tableFilter/TableFilter";
+import {ActionBar} from "./layouts/sections/tableList/actionBar/ActionBar";
 
 export const Dashboard = ({page}: { page: "food" | "select table" }) => {
     if (page === "food")
@@ -30,6 +31,7 @@ export const Dashboard = ({page}: { page: "food" | "select table" }) => {
                 <TableSideBarRight/>
                 <TableList/>
                 <TableFilter/>
+                <ActionBar/>
             </SelectTablePageGrid>
         );
     else return <></>
@@ -66,4 +68,5 @@ const SelectTablePageGrid = styled.div`
         "brc brc"
         "filter filter"
         "tables sideR";
+    position: relative;
 `
