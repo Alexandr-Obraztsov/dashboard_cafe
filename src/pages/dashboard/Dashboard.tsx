@@ -62,11 +62,15 @@ const SelectTablePageGrid = styled.div`
     height: 100vh;
     width: 100vw;
     grid-template-rows: auto auto auto 1fr;
-    grid-template-columns: 1fr 125px;
+    grid-template-columns: 1fr auto;
     grid-template-areas: 
         "header header"
         "brc brc"
         "filter filter"
         "tables sideR";
     position: relative;
+
+    ::-webkit-scrollbar {
+        width: 0;
+    }
 `
