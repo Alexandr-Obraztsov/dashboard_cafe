@@ -8,7 +8,7 @@ export const PlaceList = ({count}: {count: number}) => {
         <StyledPlaceList>
             <FlexWrapper direction="column" gap="12px">
                 {[...Array(count)].map((val,index)=>
-                    <Item>
+                    <Item key={index}>
                         <Checkbox/>
                         <span>B-{index+1}</span>
                     </Item>

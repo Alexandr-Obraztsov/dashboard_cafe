@@ -43,7 +43,7 @@ function App() {
     return (
         <>
             {/*<Login/>*/}
-            <Dashboard page="select table"/>
+            <Dashboard page="food"/>
             {/*<AddOrderPopup {...addOrderPopupData}/>*/}
             {/*<AddNotePopup/>*/}
         </>
