@@ -3,14 +3,14 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../../../../components/FlexWrapper";
 import {theme} from "../../../../../components/styles/Theme";
 
-export const Breadcrumbs = () => {
+
+export const Breadcrumbs = (props: {crumbs: Array<string>}) => {
     return (
         <StyledBreadcrumbs>
             <nav>
                 <ul>
                     <FlexWrapper gap="20px">
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="#">Food</a></li>
+                        {props.crumbs.map((crumb, index) => <li key={index}><a href="#">{crumb}</a></li>)}
                     </FlexWrapper>
                 </ul>
             </nav>
