@@ -1,14 +1,11 @@
 import React from 'react';
-import {Login} from "./pages/login/Login";
+
 import {Dashboard} from "./pages/dashboard/Dashboard";
-import {BasicPopup} from "./popups/basicPopup/BasicPopup";
-import {Title} from "./components/Title";
-import {AddOrderPopup} from "./popups/addOrderPopup/AddOrderPopup";
 import food1 from "./assets/images/dashboard/food1.png";
 import food2 from "./assets/images/dashboard/food2.png";
 import food3 from "./assets/images/dashboard/food3.png";
-import {AddNotePopup} from "./popups/addNotePopup/AddNotePopup";
-
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {Login} from "./pages/login/Login";
 
 const addOrderPopupData = {
     order: {
@@ -42,8 +39,15 @@ const addOrderPopupData = {
 function App() {
     return (
         <>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="*" element={<Login/>}/>
+                    <Route path="food" element={<Dashboard page="food"/>}/>
+                    <Route path="tables" element={<Dashboard page="select table"/>}/>
+                </Routes>
+            </BrowserRouter>
             {/*<Login/>*/}
-            <Dashboard page="food"/>
+            {/*<Dashboard page="food"/>*/}
             {/*<AddOrderPopup {...addOrderPopupData}/>*/}
             {/*<AddNotePopup/>*/}
         </>

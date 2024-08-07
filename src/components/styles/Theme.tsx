@@ -29,10 +29,19 @@ export const theme = {
         },
 
         tables: {
-            available: "#3395F0",
-            reserved: "#FF5C00",
-            billed: "#13C91B",
-            availableSoon: "#F0B433",
+            primaryColors: {
+                available: "#3395F0",
+                reserved: "#FF5C00",
+                billed: "#13C91B",
+                availableSoon: "#F0B433",
+            },
+
+            secondaryColors: {
+                available: "#ECF6FF",
+                reserved: "#FFF5EE",
+                billed: "#ECFEED",
+                availableSoon: "#FFF9EB",
+            }
         }
     }
 }

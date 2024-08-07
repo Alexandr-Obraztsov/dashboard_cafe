@@ -15,6 +15,7 @@ export const Button = styled.button<ButtonPropsType>`
     font-size: 16px;
     font-family: Poppins, sans-serif;
     border-radius: 52px;
+    text-align: center;
     
     ${props => props.primary && css`
         background-color: ${props.backColor || theme.colors.button.background.primary};

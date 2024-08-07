@@ -162,7 +162,6 @@ const StyledProductList = styled.main`
 
 const Grid = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(200px, auto));
     gap: 16px;
-    grid-auto-rows: minmax(250px, auto);
 `

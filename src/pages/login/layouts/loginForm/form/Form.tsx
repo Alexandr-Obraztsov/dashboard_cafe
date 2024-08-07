@@ -20,7 +20,7 @@ export const Form = () => {
                 height: "24px"
             }} placeholder="Enter password"/>
             <Link href="#">Forgot password?</Link>
-            <Button type="submit" primary={true} padding="12px 100px">Running order</Button>
+            <Button as="a" href="food" primary={true} padding="12px 100px">Running order</Button>
         </StyledForm>
     );
 };
@@ -44,6 +44,7 @@ const StyledForm = styled.form`
 
 const Link = styled.a`
     display: block;
-    margin-top: 140px;
+    margin: 20px 0 32px;
     color: ${theme.colors.text.accent};
+    font-weight: 600;
 `

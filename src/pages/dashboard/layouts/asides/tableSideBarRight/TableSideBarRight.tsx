@@ -12,14 +12,14 @@ export const TableSideBarRight = () => {
     return (
         <StyledTableSideBarRight>
             <FlexWrapper direction="column" gap="24px">
-                {places.map((count, index) => <PlaceList count={count}/>)}
+                {places.map((count, index) => <PlaceList key={index} count={count}/>)}
             </FlexWrapper>
         </StyledTableSideBarRight>
     );
 };
 
 const StyledTableSideBarRight = styled.aside`
-    background-color: ${theme.colors.background.page};
+    background-color: ${theme.colors.background.tertiary};
     grid-area: sideR;
     overflow-y: auto;
 `

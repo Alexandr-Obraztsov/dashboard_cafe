@@ -13,7 +13,8 @@ export const CustomerInformation = () => {
             <Field type="text" name="table" placeholder="Select table" rightIcon={{
                 name: "chevron-right",
                 width: "24px",
-                height: "24px"
+                height: "24px",
+                href: "tables"
             }}/>
             <Button type="submit" backColor={theme.colors.button.background.secondary}
                     textColor={theme.colors.button.text.accent} primary={true}>Add note</Button>
@@ -32,5 +33,9 @@ const StyledCustomerInformation = styled.form`
     ${Button} {
         margin-top: 12px;
         width: 100%;
+    }
+    
+    a div {
+        width: 24px;height: 24px;
     }
 `

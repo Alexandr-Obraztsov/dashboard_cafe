@@ -2,13 +2,45 @@ import React from 'react';
 import styled from "styled-components";
 import {theme} from "../../../../../components/styles/Theme";
 import {FlexWrapper} from "../../../../../components/FlexWrapper";
-import {ActionBar} from "./actionBar/ActionBar";
+import {Table} from "./table/Table";
 
 export const TableList = () => {
     return (
         <StyledTableList>
-            <FlexWrapper justifyContent="space-between" alignItems="flex-start">
+            <FlexWrapper gap="44px" direction="column">
+                <FlexWrapper justifyContent="space-between" alignItems="flex-start">
+                    <Table name="T-01" columns={1} status="available"/>
+                    <Table name="T-02" columns={1} status="available"/>
+                    <Table name="T-03" columns={4} rows={1} status="available"/>
+                    <Table name="T-04" columns={1} status="availableSoon"/>
+                    <Table name="T-05" columns={1} rows={1} status="billed"/>
+                </FlexWrapper>
 
+                <FlexWrapper justifyContent="space-between" alignItems="flex-start">
+                    <Table name="T-06" columns={5} rows={1} status="reserved"/>
+                    <Table name="T-08" columns={4} rows={1} status="available"/>
+                    <Table name="T-07" columns={5} rows={1} status="reserved"/>
+                </FlexWrapper>
+
+                <FlexWrapper justifyContent="space-between" alignItems="flex-start">
+                    <Table name="T-09" columns={1} status="reserved"/>
+                    <Table name="T-10" columns={1} rows={1} status="available"/>
+                    <Table name="T-11" columns={4} rows={1} status="available"/>
+                    <Table name="T-12" columns={1} rows={1} status="billed"/>
+                    <Table name="T-13" columns={1} status="billed"/>
+                </FlexWrapper>
+
+                <FlexWrapper justifyContent="space-between" alignItems="flex-start">
+                    <Table name="T-06" columns={5} rows={1} status="reserved"/>
+                    <Table name="T-08" columns={4} rows={1} status="available"/>
+                    <Table name="T-07" columns={5} rows={1} status="reserved"/>
+                </FlexWrapper>
+
+                <FlexWrapper justifyContent="space-between" alignItems="flex-start">
+                    <Table name="T-06" columns={5} rows={1} status="reserved"/>
+                    <Table name="T-08" columns={4} rows={1} status="available"/>
+                    <Table name="T-07" columns={5} rows={1} status="reserved"/>
+                </FlexWrapper>
             </FlexWrapper>
         </StyledTableList>
     );
@@ -16,6 +48,8 @@ export const TableList = () => {
 
 const StyledTableList = styled.main`
     grid-area: tables;
-    background-color: ${theme.colors.background.page};
+    background-color: ${theme.colors.background.tertiary};
     padding: 24px;
+    height: 100%;
+    overflow-y: auto;
 `

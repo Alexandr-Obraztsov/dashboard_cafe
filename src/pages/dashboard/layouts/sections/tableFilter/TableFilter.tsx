@@ -28,7 +28,7 @@ export const TableFilter = () => {
         <StyledTableFilter>
             <FlexWrapper alignItems="center" justifyContent="space-between">
                 <FlexWrapper alignItems="center" gap="60px" height="100%">
-                    <IconWrapper>
+                    <IconWrapper href="..">
                         <Icon name="arrow-left" width="20px" height="20px"/>
                     </IconWrapper>
                     <TableStatus/>
@@ -51,8 +51,8 @@ const StyledTableFilter = styled.section`
     }
 `
 
-const IconWrapper = styled.button`
-    border: none;;
+const IconWrapper = styled.a`
+    border: none;
     padding: 24px 22px;
     display: flex;
     justify-content: center;

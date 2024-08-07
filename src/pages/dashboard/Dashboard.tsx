@@ -9,7 +9,7 @@ import {ProductList} from "./layouts/sections/productList/ProductList";
 import {TableSideBarRight} from "./layouts/asides/tableSideBarRight/TableSideBarRight";
 import {TableList} from "./layouts/sections/tableList/TableList";
 import {TableFilter} from "./layouts/sections/tableFilter/TableFilter";
-import {ActionBar} from "./layouts/sections/tableList/actionBar/ActionBar";
+import {ActionBar} from "./layouts/sections/actionBar/ActionBar";
 
 export const Dashboard = ({page}: { page: "food" | "select table" }) => {
     if (page === "food")

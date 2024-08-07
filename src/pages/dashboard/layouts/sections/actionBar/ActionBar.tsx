@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
-import {theme} from "../../../../../../components/styles/Theme";
-import {Button} from "../../../../../../components/button/Button";
-import Icon from "../../../../../../components/icon/Icon";
-import {FlexWrapper} from "../../../../../../components/FlexWrapper";
-import {IconButton} from "../../../../../../components/iconButton/IconButton";
+import {theme} from "../../../../../components/styles/Theme";
+import {Button} from "../../../../../components/button/Button";
+import Icon from "../../../../../components/icon/Icon";
+import {IconButton} from "../../../../../components/iconButton/IconButton";
 
 const tables = [
     "T-11",
@@ -20,7 +19,7 @@ export const ActionBar = () => {
                 <Order>Order #102</Order>
                 <SelectedList>
                     {tables.map((table, index) =>
-                        <SelectedItem>
+                        <SelectedItem key={index}>
                             <IconButton name="x-little" width="10px" height="10px" bgColor="#EA4F3B"/>
                             <TableText>{table}</TableText>
                         </SelectedItem>
@@ -34,6 +33,7 @@ export const ActionBar = () => {
 
 const StyledActionBar = styled.section`
     position: absolute;
+    z-index: 999;
     grid-area: tables;
     bottom: 24px;
     left: 24px;

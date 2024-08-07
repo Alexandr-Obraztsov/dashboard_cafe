@@ -1,15 +1,14 @@
 import React from 'react';
 import styled from "styled-components";
-import Icon from "../../../../../../components/icon/Icon";
 import {theme} from "../../../../../../components/styles/Theme";
 
 export const TableStatus = () => {
     return (
         <StyledTableStatus>
-                <Status color={theme.colors.tables.available}>Available</Status>
-                <Status color={theme.colors.tables.reserved}>Reserved</Status>
-                <Status color={theme.colors.tables.billed}>Billed</Status>
-                <Status color={theme.colors.tables.availableSoon}>Available soon</Status>
+                <Status color={theme.colors.tables.primaryColors.available}>Available</Status>
+                <Status color={theme.colors.tables.primaryColors.reserved}>Reserved</Status>
+                <Status color={theme.colors.tables.primaryColors.billed}>Billed</Status>
+                <Status color={theme.colors.tables.primaryColors.availableSoon}>Available soon</Status>
         </StyledTableStatus>
     );
 };
