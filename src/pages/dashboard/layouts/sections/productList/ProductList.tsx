@@ -140,7 +140,7 @@ const cards = [
     },
 ]
 
-export const ProductList = () => {
+export const ProductList : React.FC = () => {
     return (
         <StyledProductList>
             <Grid>

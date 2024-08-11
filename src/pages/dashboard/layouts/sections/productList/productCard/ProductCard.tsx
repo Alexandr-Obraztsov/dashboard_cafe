@@ -9,7 +9,7 @@ type ProductCardPropsType = {
     image: string
 }
 
-export const ProductCard = (props: ProductCardPropsType) => {
+export const ProductCard : React.FC<ProductCardPropsType> = (props: ProductCardPropsType) => {
     return (
         <StyledProductCard>
             <Picture src={props.image} alt={props.name}/>

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {theme} from "../../../../../../components/styles/Theme";
 
-export const TableStatus = () => {
+export const TableStatus : React.FC = () => {
     return (
         <StyledTableStatus>
                 <Status color={theme.colors.tables.primaryColors.available}>Available</Status>

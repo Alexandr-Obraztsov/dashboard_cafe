@@ -28,7 +28,7 @@ const filterButtons = [
     },
 ]
 
-export const FoodFilter = () => {
+export const FoodFilter : React.FC = () => {
     return (
         <StyledFoodFilter>
             <SearchField/>

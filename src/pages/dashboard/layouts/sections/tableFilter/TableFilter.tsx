@@ -23,7 +23,7 @@ const filterButtons = [
 ]
 
 
-export const TableFilter = () => {
+export const TableFilter : React.FC = () => {
     return (
         <StyledTableFilter>
             <FlexWrapper alignItems="center" justifyContent="space-between">

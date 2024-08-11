@@ -4,7 +4,7 @@ import {FlexWrapper} from "../../../../../components/FlexWrapper";
 import {theme} from "../../../../../components/styles/Theme";
 
 
-export const Breadcrumbs = (props: {crumbs: Array<string>}) => {
+export const Breadcrumbs : React.FC<{crumbs: Array<string>}> = (props: {crumbs: Array<string>}) => {
     return (
         <StyledBreadcrumbs>
             <nav>

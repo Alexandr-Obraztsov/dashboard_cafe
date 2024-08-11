@@ -11,7 +11,7 @@ import {TableList} from "./layouts/sections/tableList/TableList";
 import {TableFilter} from "./layouts/sections/tableFilter/TableFilter";
 import {ActionBar} from "./layouts/sections/actionBar/ActionBar";
 
-export const Dashboard = ({page}: { page: "food" | "select table" }) => {
+export const Dashboard : React.FC<{ page: "food" | "select table" }> = ({page}: { page: "food" | "select table" }) => {
     if (page === "food")
         return (
             <FoodPageGrid>

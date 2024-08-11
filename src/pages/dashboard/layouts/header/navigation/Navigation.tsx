@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from "styled-components";
 import {FlexWrapper} from "../../../../../components/FlexWrapper";
 import Icon from "../../../../../components/icon/Icon";
+import styled from "styled-components";
 import {theme} from "../../../../../components/styles/Theme";
 
 const menuItems = [
@@ -31,7 +31,7 @@ const menuItems = [
 ]
 
 
-export const Navigation = () => {
+export const Navigation : React.FC = () => {
     return (
         <StyledNavigation>
             <ul>
@@ -51,6 +51,7 @@ export const Navigation = () => {
         </StyledNavigation>
     );
 };
+
 
 const StyledNavigation = styled.nav`
     

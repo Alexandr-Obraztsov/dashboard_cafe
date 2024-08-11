@@ -4,7 +4,7 @@ import {theme} from "../../../../../components/styles/Theme";
 import {FlexWrapper} from "../../../../../components/FlexWrapper";
 import {Table} from "./table/Table";
 
-export const TableList = () => {
+export const TableList : React.FC = () => {
     return (
         <StyledTableList>
             <FlexWrapper gap="44px" direction="column">
