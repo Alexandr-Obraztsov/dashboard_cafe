@@ -52,17 +52,20 @@ const Name = styled.h3`
     font-size: 16px;
     color: ${theme.colors.text.primary};
     white-space: nowrap;
+    letter-spacing: -0.3px;
 `
 
 const Price = styled.div`
     font-weight: 400;
     font-size: 12px;
+    line-height: 16px;
     color: ${theme.colors.text.secondary};
     display: flex;
     flex-direction: column;
     gap: 2px;
     
     span {
+        line-height: 24px;
         font-size: 16px;
         font-weight: 600;
         color: ${theme.colors.text.accent};

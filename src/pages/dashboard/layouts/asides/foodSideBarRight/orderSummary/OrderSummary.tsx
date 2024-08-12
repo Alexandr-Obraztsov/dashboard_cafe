@@ -9,7 +9,7 @@ export const OrderSummary = () => {
             <Text>Sub Total<span>$ 62.13</span></Text>
             <Text>Tax (10%)<span>$ 1.87</span></Text>
             <Text>Total<span>$ 64.00</span></Text>
-            <Button primary={true}>Pay Now</Button>
+            <Button primary={true} padding="11px 0">Pay Now</Button>
         </StyledOrderSummary>
     );
 };
@@ -28,6 +28,7 @@ const Text = styled.span`
     justify-content: space-between;
     font-weight: 400;
     font-size: 16px;
+    line-height: 24px;
     color: ${theme.colors.text.secondary};
     
     &:nth-child(2){

@@ -14,7 +14,7 @@ export const SearchField = () => {
 
 const StyledSearchField = styled.label`
     display: flex;
-    padding: 22px 24px;
+    padding: 21px 24px;
     background-color: ${theme.colors.background.primary};
     align-items: center;
     gap: 10px;

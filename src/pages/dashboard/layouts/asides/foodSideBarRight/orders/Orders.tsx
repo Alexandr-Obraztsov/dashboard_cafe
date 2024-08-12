@@ -66,10 +66,10 @@ const StyledOrders = styled.section`
 
 const OrderList = styled.ul`
     overflow-y: scroll;
-    height: 216px;
-    padding-right: 12px;
+    height: 330px;
+    padding-right: 8px;
     
     li {
-        padding: 16px 0;
+        padding: 15px 0 15px;
     }
 `

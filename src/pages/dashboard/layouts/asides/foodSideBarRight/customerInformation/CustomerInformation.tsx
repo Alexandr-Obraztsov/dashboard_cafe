@@ -17,25 +17,26 @@ export const CustomerInformation = () => {
                 href: "tables"
             }}/>
             <Button type="submit" backColor={theme.colors.button.background.secondary}
-                    textColor={theme.colors.button.text.accent} primary={true}>Add note</Button>
+                    textColor={theme.colors.button.text.accent} primary={true} padding="11px 24px">Add note</Button>
         </StyledCustomerInformation>
     );
 };
 
 const StyledCustomerInformation = styled.form`
-    padding: 24px;
+    padding: 24px 24px 24px;
     border-bottom: 1px solid ${theme.colors.background.secondary};
     
     label + label {
-        margin-top: 8px;
+        margin-top: 12px;
     }
     
     ${Button} {
-        margin-top: 12px;
+        margin-top: 16px;
         width: 100%;
     }
     
     a div {
-        width: 24px;height: 24px;
+        width: 24px;
+        height: 24px;
     }
 `

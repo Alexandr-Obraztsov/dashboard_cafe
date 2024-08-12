@@ -22,4 +22,6 @@ const StyledSideBarRight = styled.aside`
     background-color: ${theme.colors.background.primary};
     border-left: 1px solid ${theme.colors.background.secondary};
     padding: 16px 0 24px;
+    height: 100%;
+    overflow-y: auto;
 `

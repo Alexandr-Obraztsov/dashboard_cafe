@@ -73,6 +73,11 @@ const StyledTabs = styled.div`
         bottom: 0;
         z-index: 2;
     }
+    
+    span {
+        line-height: 20px;
+        letter-spacing: -0.8px;
+    }
 
 
     input:checked ~ ${Switcher} {
