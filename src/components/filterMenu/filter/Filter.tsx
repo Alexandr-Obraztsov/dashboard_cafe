@@ -29,19 +29,22 @@ const Radio = styled.input.attrs(() => ({
 `
 
 const Button = styled.a`
-    padding: 8px 16px;
+    padding: 6px 16px;
     font-size: 14px;
     font-weight: 400;
     color: ${theme.colors.text.primary};
     border: 1px solid ${theme.colors.background.secondary};
     border-radius: 100px;
     white-space: nowrap;
+    line-height: 140%;
+    letter-spacing: -0.25px;
 `
 
 const StyledFilter = styled.div`
     position: relative;
     
     ${Radio}:checked + ${Button} {
+        font-weight: 600;
         background-color: ${theme.colors.button.background.secondary};
         border: 1px solid ${theme.colors.button.background.primary};
         color: ${theme.colors.button.text.accent};

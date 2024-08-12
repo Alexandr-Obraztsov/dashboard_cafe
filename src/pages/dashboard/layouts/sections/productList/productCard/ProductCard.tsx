@@ -13,10 +13,8 @@ export const ProductCard : React.FC<ProductCardPropsType> = (props: ProductCardP
     return (
         <StyledProductCard>
             <Picture src={props.image} alt={props.name}/>
-            <FlexWrapper alignItems="center" direction="column">
-                <Name>{props.name}</Name>
-                <Price>$ {props.price}</Price>
-            </FlexWrapper>
+            <Name>{props.name}</Name>
+            <Price>$ {props.price}</Price>
         </StyledProductCard>
     );
 };
@@ -26,22 +24,25 @@ const StyledProductCard = styled.button`
     border: none;
     outline: none;
     border-radius: 16px;
-    padding: 12px 8px;
+    padding: 12px 8px 16px;
     background-color: ${theme.colors.background.primary};
     cursor: pointer;
 `
 
 const Name = styled.h3`
     margin-top: 12px;
+    line-height: 24px;
     margin-bottom: 4px;
     font-size: 16px;
     font-weight: 600;
+    letter-spacing: -0.2px;
     color: ${theme.colors.text.primary};
 `
 
 const Price = styled.span`
     font-size: 16px;
     font-weight: 600;
+    line-height: 24px;
     color: ${theme.colors.text.accent};
 `
 
@@ -50,4 +51,5 @@ const Picture = styled.img`
     width: 100%;
     object-fit: cover;
     border-radius: 12px;
+    display: block;
 `

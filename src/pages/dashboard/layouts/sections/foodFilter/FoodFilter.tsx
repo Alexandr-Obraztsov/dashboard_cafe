@@ -32,8 +32,8 @@ export const FoodFilter : React.FC = () => {
     return (
         <StyledFoodFilter>
             <SearchField/>
-            <FlexWrapper alignItems="center" justifyContent="center">
-                <FilterMenu buttons={filterButtons} gap="16px"/>
+            <FlexWrapper alignItems="center" >
+                <FilterMenu buttons={filterButtons} gap="8px"/>
             </FlexWrapper>
         </StyledFoodFilter>
     );
@@ -50,7 +50,7 @@ const StyledFoodFilter = styled.section`
         flex-grow: 1;
     }
     
-    ${FlexWrapper} {
+    & > ${FlexWrapper} {
         padding: 0 24px;
     }
 `
