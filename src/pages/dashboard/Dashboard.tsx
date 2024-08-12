@@ -17,7 +17,7 @@ export const Dashboard : React.FC<{ page: "food" | "select table" }> = ({page}: 
             <FoodPageGrid>
                 <Header/>
                 <FoodSideBarLeft/>
-                <Breadcrumbs crumbs={["Dashboard", "food"]}/>
+                <Breadcrumbs crumbs={["Dashboard", "Food"]}/>
                 <FoodFilter/>
                 <ProductList/>
                 <FoodSideBarRight/>

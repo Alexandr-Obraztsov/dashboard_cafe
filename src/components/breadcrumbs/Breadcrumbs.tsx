@@ -9,7 +9,7 @@ export const Breadcrumbs : React.FC<{crumbs: Array<string>}> = (props: {crumbs: 
         <StyledBreadcrumbs>
             <nav>
                 <ul>
-                    <FlexWrapper gap="6px" alignItems="center">
+                    <FlexWrapper gap="6px" height="17px" alignItems="center">
                         {props.crumbs.map((crumb, index) => <li key={index}><a href="#">{crumb}</a></li>)}
                     </FlexWrapper>
                 </ul>
@@ -29,11 +29,7 @@ const StyledBreadcrumbs = styled.div`
         color: ${theme.colors.text.accent};
         font-family: Poppins, sans-serif;
         font-weight: 500;
-        font-size: 12px;
-    }
-
-${FlexWrapper} {
-        height: 18px;
+        font-size: calc(23px / 2);
     }
     
     li:last-child a {
