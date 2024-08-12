@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from "../icon/Icon";
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 
 type IconButtonPropsType = {
     name: string,

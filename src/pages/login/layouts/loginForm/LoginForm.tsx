@@ -1,7 +1,5 @@
 import React from 'react';
 import Icon from "../../../../components/icon/Icon";
-import styled from "styled-components";
-import {theme} from "../../../../components/styles/Theme";
 import {Form} from "./form/Form";
 import {FlexWrapper} from "../../../../components/FlexWrapper";
 import { S } from './LoginForm_Styles';

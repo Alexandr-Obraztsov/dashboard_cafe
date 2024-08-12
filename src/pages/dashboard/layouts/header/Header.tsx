@@ -24,7 +24,7 @@ export const Header : React.FC = () => {
                 <FlexWrapper gap="16px" alignItems="center">
                     <Navigation/>
                     <Button primary={true} padding="8px 20px" textColor={theme.colors.button.text.accent}
-                            backColor={theme.colors.button.background.secondary}>Dinning option</Button>
+                            backColor={theme.colors.button.background.secondary}><S.ButtonText>Dinning option</S.ButtonText></Button>
                     <S.Date>10:53:00 26/02/2023</S.Date>
                     <S.Photo src={photo}/>
                 </FlexWrapper>

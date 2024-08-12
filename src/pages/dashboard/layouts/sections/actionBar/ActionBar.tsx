@@ -1,6 +1,4 @@
 import React from 'react';
-import styled from "styled-components";
-import {theme} from "../../../../../components/styles/Theme";
 import {Button} from "../../../../../components/button/Button";
 import Icon from "../../../../../components/icon/Icon";
 import {IconButton} from "../../../../../components/iconButton/IconButton";

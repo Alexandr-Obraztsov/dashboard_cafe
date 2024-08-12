@@ -18,7 +18,7 @@ const Header = styled.header`
     & > ${FlexWrapper} > ${FlexWrapper}:first-child{
         
         a {
-            margin-right: 56px;
+            margin-right: 48px;
             position: relative;
         }
         
@@ -29,7 +29,7 @@ const Header = styled.header`
             height: 44px;
             background-color: ${theme.colors.background.secondary};
             position: absolute;
-            right: -35px;
+            right: -24px;
             top: 50%;
             transform: translateY(-50%);
         }
@@ -41,16 +41,20 @@ const Header = styled.header`
     }
     
     & > ${FlexWrapper} > ${FlexWrapper}:last-child nav {
-        margin-right: 32px;
+        margin-right: 16px;
     }
 `
 
-const Date = styled.time`
+const Date = styled.span`
     display: inline-block;
     padding: 8px 20px;
     background-color: ${theme.colors.background.tertiary};
     border-radius: 40px;
     color: ${theme.colors.text.primary};
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    word-spacing: 6px;
 `
 
 const Title = styled.h1`
@@ -65,10 +69,17 @@ const Description = styled.span`
     color: ${theme.colors.text.secondary};
 `
 
+const ButtonText = styled.span`
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+`
+
 export const S = {
     Header,
     Photo,
     Date,
     Title,
-    Description
+    Description,
+    ButtonText
 }

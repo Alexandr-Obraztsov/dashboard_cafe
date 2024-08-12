@@ -1,8 +1,6 @@
 import React from 'react';
-import styled from "styled-components";
 import {Field} from "../../../../../components/field/Field";
 import {Button} from "../../../../../components/button/Button";
-import {theme} from "../../../../../components/styles/Theme";
 import { S } from '../LoginForm_Styles';
 
 export const Form : React.FC = () => {
