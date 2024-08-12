@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {Header} from "./layouts/header/Header";
 import {FoodSideBarLeft} from "./layouts/asides/foodSideBarLeft/FoodSideBarLeft";
 import {FoodSideBarRight} from "./layouts/asides/foodSideBarRight/FoodSideBarRight";
-import {Breadcrumbs} from "./layouts/sections/breadcrumbs/Breadcrumbs";
+import {Breadcrumbs} from "../../components/breadcrumbs/Breadcrumbs";
 import {FoodFilter} from "./layouts/sections/foodFilter/FoodFilter";
 import {ProductList} from "./layouts/sections/productList/ProductList";
 import {TableSideBarRight} from "./layouts/asides/tableSideBarRight/TableSideBarRight";
