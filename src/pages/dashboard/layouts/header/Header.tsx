@@ -15,7 +15,7 @@ export const Header : React.FC = () => {
             <FlexWrapper justifyContent="space-between" alignItems="center" height="100%">
                 <FlexWrapper alignItems="center">
                     <IconButton name="arrow-left" width="20px" height="20px" bgColor={theme.colors.button.background.tertiary} outline={true}/>
-                    <Icon name="logo-without-text" width="44px" height="44px"/>
+                    <Icon name="logo-without-text" width="36px" height="36px"/>
                     <FlexWrapper direction="column">
                         <S.Title>Walk-In</S.Title>
                         <S.Description>Coca coffeetalk</S.Description>
@@ -23,7 +23,7 @@ export const Header : React.FC = () => {
                 </FlexWrapper>
                 <FlexWrapper gap="16px" alignItems="center">
                     <Navigation/>
-                    <Button primary={true} padding="8px 20px" textColor={theme.colors.button.text.accent}
+                    <Button primary={true} padding="5px 20px" textColor={theme.colors.button.text.accent}
                             backColor={theme.colors.button.background.secondary}><S.ButtonText>Dinning option</S.ButtonText></Button>
                     <S.Date>10:53:00 26/02/2023</S.Date>
                     <S.Photo src={photo}/>

@@ -17,24 +17,24 @@ const categories = [
         name: "Beverages",
         icon: {
             name: "beverages",
-            width: "33px",
-            height: "32px"
+            width: "27px",
+            height: "28px"
         }
     },
     {
         name: "Food",
         icon: {
             name: "breakfast",
-            width: "33px",
-            height: "32px"
+            width: "29px",
+            height: "28px"
         }
     },
     {
         name: "Appetizer",
         icon: {
             name: "pasta",
-            width: "33px",
-            height: "32px"
+            width: "29px",
+            height: "28px"
         }
     },
     {
@@ -61,14 +61,14 @@ export const FoodSideBarLeft = () => {
         <S.FoodSideBarLeft>
             <nav>
                 <ul>
-                    <FlexWrapper direction="column" gap="12px">
+                    <FlexWrapper direction="column" gap="18px">
                         {categories.map((category, index) => (
                             <S.Category>
                                 <S.Radio key={index}/>
                                 <li key={index}>
                                     <a href="#">
                                         <FlexWrapper direction="column" gap="8px" alignItems="center">
-                                            <Icon {...category.icon}/>
+                                            <FlexWrapper height="32px" justifyContent="center" alignItems="center"><Icon {...category.icon}/></FlexWrapper>
                                             <span>{category.name}</span>
                                         </FlexWrapper>
                                     </a>

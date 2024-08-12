@@ -18,7 +18,7 @@ const Header = styled.header`
     & > ${FlexWrapper} > ${FlexWrapper}:first-child{
         
         a {
-            margin-right: 48px;
+            margin-right: 52px;
             position: relative;
         }
         
@@ -35,7 +35,7 @@ const Header = styled.header`
         }
         
         ${FlexWrapper} {
-            margin-left: 24px;
+            margin-left: 28px;
         }
         
     }
@@ -60,19 +60,20 @@ const Date = styled.span`
 const Title = styled.h1`
     font-weight: 600;
     font-size: 16px;
+    line-height: 24px;
     color: ${theme.colors.text.primary};
 `
 
 const Description = styled.span`
     font-weight: 400;
     font-size: 14px;
+    line-height: 20px;
     color: ${theme.colors.text.secondary};
 `
 
 const ButtonText = styled.span`
     font-weight: 600;
     font-size: 14px;
-    line-height: 19px;
 `
 
 export const S = {

@@ -23,11 +23,12 @@ const Category = styled.div`
 
     li {
         width: 77px;
-        padding: 12px 0;
+        padding: 8px 0;
         text-align: center;
         border-radius: 8px;
         font-weight: 500;
         font-size: 12px;
+        line-height: 14px;
     }
 
     ${Radio}:checked + li  {
@@ -43,7 +44,7 @@ const FoodSideBarLeft = styled.aside`
     grid-area: sideL;
     background-color: ${theme.colors.background.primary};
     border-right: 1px solid ${theme.colors.background.secondary};
-    padding: 24px;
+    padding: 28px 24px 24px;
 `
 
 export const S = {
