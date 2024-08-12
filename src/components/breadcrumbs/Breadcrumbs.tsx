@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import {FlexWrapper} from "../../../../../components/FlexWrapper";
-import {theme} from "../../../../../components/styles/Theme";
+import {FlexWrapper} from "../FlexWrapper";
+import {theme} from "../styles/Theme";
 
 
 export const Breadcrumbs : React.FC<{crumbs: Array<string>}> = (props: {crumbs: Array<string>}) => {
@@ -9,7 +9,7 @@ export const Breadcrumbs : React.FC<{crumbs: Array<string>}> = (props: {crumbs: 
         <StyledBreadcrumbs>
             <nav>
                 <ul>
-                    <FlexWrapper gap="20px">
+                    <FlexWrapper gap="6px" alignItems="center">
                         {props.crumbs.map((crumb, index) => <li key={index}><a href="#">{crumb}</a></li>)}
                     </FlexWrapper>
                 </ul>
@@ -19,14 +19,21 @@ export const Breadcrumbs : React.FC<{crumbs: Array<string>}> = (props: {crumbs: 
 };
 
 
-const StyledBreadcrumbs = styled.section`
+const StyledBreadcrumbs = styled.div`
     grid-area: brc;
-    padding: 8px 16px;
+    padding: 8px 15px;
     background-color: ${theme.colors.background.primary};
     border-bottom: 1px solid ${theme.colors.background.secondary};
     
     a{
         color: ${theme.colors.text.accent};
+        font-family: Poppins, sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+${FlexWrapper} {
+        height: 18px;
     }
     
     li:last-child a {
@@ -36,6 +43,6 @@ const StyledBreadcrumbs = styled.section`
     ul li:not(:last-child) a::after {
         content: "/";
         display: inline-block;
-        transform: translateX(10px);
+        transform: translateX(3px);
     }
 `
