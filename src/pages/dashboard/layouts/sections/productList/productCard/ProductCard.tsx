@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from "styled-components";
 import {theme} from "../../../../../../components/styles/Theme";
-import {FlexWrapper} from "../../../../../../components/FlexWrapper";
+import {FoodStatusType} from "../../../../../../components/filterMenu/FilterMenu";
 
-type ProductCardPropsType = {
+export type ProductCardPropsType = {
     name: string
     price: string
     image: string
+    status: FoodStatusType
 }
 
 export const ProductCard : React.FC<ProductCardPropsType> = (props: ProductCardPropsType) => {
@@ -20,6 +21,7 @@ export const ProductCard : React.FC<ProductCardPropsType> = (props: ProductCardP
 };
 
 const StyledProductCard = styled.button`
+    width: 100%;
     font: inherit;
     border: none;
     outline: none;

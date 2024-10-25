@@ -10,6 +10,8 @@ type IconButtonPropsType = {
     outline?: boolean,
     href?: string,
     type?: string,
+    as?: "a" | "button",
+    onClick?: () => void
 }
 
 export const IconButton = (props: IconButtonPropsType) => {
@@ -25,6 +27,8 @@ export const IconButton = (props: IconButtonPropsType) => {
 const StyledIconButton = styled.a<IconButtonPropsType>`
     display: inline-block;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
     
     div {
         width: 36px;

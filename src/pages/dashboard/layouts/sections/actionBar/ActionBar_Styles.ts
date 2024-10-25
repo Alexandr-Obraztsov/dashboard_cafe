@@ -2,9 +2,8 @@ import styled from "styled-components";
 import {theme} from "../../../../../components/styles/Theme";
 
 const ActionBar = styled.section`
-    position: absolute;
+    position: fixed;
     z-index: 999;
-    grid-area: tables;
     bottom: 24px;
     left: 24px;
     right: 24px;

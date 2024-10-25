@@ -13,6 +13,7 @@ type OrderPropsType = {
 }
 
 export const Order = (props: OrderPropsType) => {
+    const [count, setCount] = React.useState(props.count);
     return (
         <StyledOrder as={props.as || "div"}>
             <Picture src={props.image}/>
@@ -22,9 +23,9 @@ export const Order = (props: OrderPropsType) => {
                     Price<span>$ {props.price}</span>
                 </Price>
                 <Counter>
-                    <IconButton href="#" name="minus" width="20px" height="20px" bgColor={theme.colors.button.background.tertiary}/>
-                    {props.count}
-                    <IconButton href="#" name="plus" width="20px" height="20px" bgColor={theme.colors.button.background.fourth}/>
+                    <IconButton as="button" onClick={() => setCount(count >= 1 ? count - 1 : 0)} name="minus" width="20px" height="20px" bgColor={theme.colors.button.background.tertiary}/>
+                    {count}
+                    <IconButton as="button" onClick={() => setCount(count + 1)} name="plus" width="20px" height="20px" bgColor={theme.colors.button.background.fourth}/>
                 </Counter>
             </FlexWrapper>
         </StyledOrder>

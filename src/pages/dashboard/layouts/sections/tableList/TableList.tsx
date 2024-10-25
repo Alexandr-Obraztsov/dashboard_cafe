@@ -7,7 +7,7 @@ import {Table} from "./table/Table";
 export const TableList : React.FC = () => {
     return (
         <StyledTableList>
-            <FlexWrapper gap="44px" direction="column">
+            <FlexWrapper gap="44px" direction="column" width={"100%"} style={{maxWidth: "1800px", padding: "24px 24px 200px"}}>
                 <FlexWrapper justifyContent="space-between" alignItems="flex-start">
                     <Table name="T-01" columns={1} status="available"/>
                     <Table name="T-02" columns={1} status="available"/>
@@ -47,9 +47,10 @@ export const TableList : React.FC = () => {
 };
 
 const StyledTableList = styled.main`
-    grid-area: tables;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
     background-color: ${theme.colors.background.tertiary};
-    padding: 24px;
     height: 100%;
     overflow-y: auto;
 `
