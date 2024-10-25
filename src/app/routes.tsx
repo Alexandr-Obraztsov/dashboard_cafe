@@ -14,7 +14,7 @@ export const PATHS = {
 }
 
 
-export const routes = createHashRouter([
+export const routes = createBrowserRouter([
     {
         path: PATHS.LOGIN,
         element: <Login />
