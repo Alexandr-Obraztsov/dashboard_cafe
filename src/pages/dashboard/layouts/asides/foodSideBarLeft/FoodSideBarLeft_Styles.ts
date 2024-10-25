@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {theme} from "../../../../../components/styles/Theme";
-import {FlexWrapper} from "../../../../../components/FlexWrapper";
 
 const Radio = styled.input.attrs(() => ({
     type: "radio",

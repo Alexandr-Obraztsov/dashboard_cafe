@@ -39,7 +39,7 @@ export const Orders = () => {
         <StyledOrders>
             <Title>Orders details</Title>
             <OrderList>
-                {orders.map((order, index) => (
+                {orders.map((order) => (
                     <Order as="li" {...order}/>
                 ))}
             </OrderList>
