@@ -7,7 +7,7 @@ import {Tables} from "../pages/dashboard/layouts/Tables";
 
 
 export const PATHS = {
-    LOGIN: "/",
+    LOGIN: "*",
     DASHBOARD: "/dashboard",
     FOOD: "/dashboard/food",
     SELECT_TABLE: "/dashboard/tables"
