@@ -4,73 +4,20 @@ import {Header} from "./layouts/header/Header";
 import {FoodSideBarLeft} from "./layouts/asides/foodSideBarLeft/FoodSideBarLeft";
 import {FoodSideBarRight} from "./layouts/asides/foodSideBarRight/FoodSideBarRight";
 import {Breadcrumbs} from "../../components/breadcrumbs/Breadcrumbs";
-import {FoodFilter} from "./layouts/sections/foodFilter/FoodFilter";
-import {ProductList} from "./layouts/sections/productList/ProductList";
 import {TableSideBarRight} from "./layouts/asides/tableSideBarRight/TableSideBarRight";
 import {TableList} from "./layouts/sections/tableList/TableList";
 import {TableFilter} from "./layouts/sections/tableFilter/TableFilter";
 import {ActionBar} from "./layouts/sections/actionBar/ActionBar";
+import {FoodMain} from "./layouts/sections/foodMain/FoodMain";
+import {ReservationPopup} from "../../popups/reservationPopup/ReservationPopup";
+import {Outlet} from "react-router-dom";
+import {FlexWrapper} from "../../components/FlexWrapper";
 
-export const Dashboard : React.FC<{ page: "food" | "select table" }> = ({page}: { page: "food" | "select table" }) => {
-    if (page === "food")
+export const Dashboard : React.FC = () => {
         return (
-            <FoodPageGrid>
+            <FlexWrapper height={"100vh"} direction={"column"} style={{maxHeight: "100vh"}}>
                 <Header/>
-                <FoodSideBarLeft/>
-                <Breadcrumbs crumbs={["Dashboard", "Food"]}/>
-                <FoodFilter/>
-                <ProductList/>
-                <FoodSideBarRight/>
-            </FoodPageGrid>
+                <Outlet/>
+            </FlexWrapper>
         );
-    else if (page === "select table")
-        return (
-            <SelectTablePageGrid>
-                <Header/>
-                <Breadcrumbs crumbs={["Dashboard", "food", "Select table"]}/>
-                <TableSideBarRight/>
-                <TableList/>
-                <TableFilter/>
-                <ActionBar/>
-            </SelectTablePageGrid>
-        );
-    else return <></>
 };
-
-const FoodPageGrid = styled.div`
-    //filter: blur(2px) brightness(0.9);
-    display: grid;
-    height: 100vh;
-    width: 100vw;
-    grid-template-rows: auto auto auto 1fr;
-    grid-template-columns: auto 1fr 360px;
-    grid-template-areas: 
-        "header header header"
-        "sideL  brc sideR"
-        "sideL filter sideR"
-        "sideL productList sideR";
-
-    ::-webkit-scrollbar {
-        width: 0;
-    }
-
-`
-
-const SelectTablePageGrid = styled.div`
-    //filter: blur(2px) brightness(0.9);
-    display: grid;
-    height: 100vh;
-    width: 100vw;
-    grid-template-rows: auto auto auto 1fr;
-    grid-template-columns: 1fr auto;
-    grid-template-areas: 
-        "header header"
-        "brc brc"
-        "filter filter"
-        "tables sideR";
-    position: relative;
-
-    ::-webkit-scrollbar {
-        width: 0;
-    }
-`

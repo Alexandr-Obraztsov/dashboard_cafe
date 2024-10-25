@@ -2,16 +2,19 @@ import React from 'react';
 import styled from "styled-components";
 import {theme} from "../../styles/Theme";
 
-type FilterPropsType = {
+export type FilterPropsType = {
     name: string,
-    href: string
+    status: string,
+    setFilter: () => void,
+    active?: boolean,
+
 }
 
 export const Filter = (props: FilterPropsType) => {
     return (
         <StyledFilter>
-            <Radio/>
-            <Button href={props.href}>{props.name}</Button>
+            <Radio checked={props.active} onClick={ () => props.setFilter()}/>
+            <Button>{props.name}</Button>
         </StyledFilter>
     );
 };
@@ -28,7 +31,7 @@ const Radio = styled.input.attrs(() => ({
     opacity: 0;
 `
 
-const Button = styled.a`
+const Button = styled.button`
     padding: 6px 16px;
     font-size: 14px;
     font-weight: 400;
@@ -38,13 +41,14 @@ const Button = styled.a`
     white-space: nowrap;
     line-height: 140%;
     letter-spacing: -0.25px;
+    background-color: transparent;
+    
 `
 
 const StyledFilter = styled.div`
     position: relative;
     
     ${Radio}:checked + ${Button} {
-        font-weight: 600;
         background-color: ${theme.colors.button.background.secondary};
         border: 1px solid ${theme.colors.button.background.primary};
         color: ${theme.colors.button.text.accent};
