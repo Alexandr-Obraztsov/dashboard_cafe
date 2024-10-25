@@ -2,8 +2,12 @@ import React from 'react';
 import {Field} from "../../../../../components/field/Field";
 import {Button} from "../../../../../components/button/Button";
 import { S } from '../LoginForm_Styles';
+import {useNavigate} from "react-router-dom";
+import {PATHS} from "../../../../../app/routes";
 
 export const Form : React.FC = () => {
+    const navigate = useNavigate()
+
     return (
         <S.Form>
             <S.Label>Username</S.Label>
@@ -19,7 +23,7 @@ export const Form : React.FC = () => {
                 height: "24px"
             }} placeholder="Enter password"/>
             <S.Link href="#">Forgot password?</S.Link>
-            <Button as="a" href="food" primary={true} padding="12px 100px">Running order</Button>
+            <Button primary={true} padding="12px 100px" onClick={() => navigate(PATHS.FOOD)}>Running order</Button>
         </S.Form>
     );
 };

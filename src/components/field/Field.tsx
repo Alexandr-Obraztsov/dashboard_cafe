@@ -17,7 +17,7 @@ type FieldPropsType = {
         name: string,
         width: string,
         height: string,
-        href?: string
+        onClick?: () => void
     }
     placeholder?: string,
     id?: string

@@ -14,6 +14,7 @@ const categories = [
         }
     },
     {
+        checked: false,
         name: "Beverages",
         icon: {
             name: "beverages",
@@ -22,6 +23,7 @@ const categories = [
         }
     },
     {
+        checked: false,
         name: "Food",
         icon: {
             name: "breakfast",
@@ -30,6 +32,7 @@ const categories = [
         }
     },
     {
+        checked: false,
         name: "Appetizer",
         icon: {
             name: "pasta",
@@ -38,6 +41,7 @@ const categories = [
         }
     },
     {
+        checked: false,
         name: "Bread",
         icon: {
             name: "lasagna",
@@ -46,6 +50,7 @@ const categories = [
         }
     },
     {
+        checked: false,
         name: "Snack",
         icon: {
             name: "misc",
@@ -57,24 +62,35 @@ const categories = [
 
 
 export const FoodSideBarLeft = () => {
+
+    const [allCategories, setCategory] = React.useState(categories);
+
+
+
     return (
         <S.FoodSideBarLeft>
             <nav>
                 <ul>
                     <FlexWrapper direction="column" gap="18px">
-                        {categories.map((category, index) => (
-                            <S.Category>
-                                <S.Radio key={index}/>
-                                <li key={index}>
-                                    <a href="#">
-                                        <FlexWrapper direction="column" gap="8px" alignItems="center">
-                                            <FlexWrapper height="32px" justifyContent="center" alignItems="center"><Icon {...category.icon}/></FlexWrapper>
-                                            <span>{category.name}</span>
-                                        </FlexWrapper>
-                                    </a>
-                                </li>
-                            </S.Category>
-                        ))}
+                        {allCategories.map((category, index) => {
+                            const onClick = () => {
+                                setCategory(allCategories.map((item, i) => i === index ? {...item, checked: !item.checked} : {...item, checked: false}))
+                            }
+
+                            return (
+                                <S.Category key={index}>
+                                    <S.Radio checked={category.checked} onChange={onClick}/>
+                                    <li>
+                                        <a href="#">
+                                            <FlexWrapper direction="column" gap="8px" alignItems="center">
+                                                <FlexWrapper height="32px" justifyContent="center" alignItems="center"><Icon {...category.icon}/></FlexWrapper>
+                                                <span>{category.name}</span>
+                                            </FlexWrapper>
+                                        </a>
+                                    </li>
+                                </S.Category>
+                            )
+                        })}
                     </FlexWrapper>
                 </ul>
             </nav>

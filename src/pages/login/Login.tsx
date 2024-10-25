@@ -4,7 +4,7 @@ import styled from "styled-components";
 import {LoginForm} from "./layouts/loginForm/LoginForm";
 import background from "../../assets/images/Login/LoginBackground.webp"
 
-export const Login = () => {
+export const Login : React.FC = () => {
     return (
         <Container>
             <FlexWrapper alignItems="center" height="100%">

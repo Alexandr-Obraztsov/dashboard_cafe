@@ -8,13 +8,16 @@ import {IconButton} from "../../../../components/iconButton/IconButton";
 
 import photo from "../../../../assets/images/dashboard/profile.png"
 import {S} from "./Header_Styles";
+import {useNavigate} from "react-router-dom";
 
 export const Header : React.FC = () => {
+    const navigate = useNavigate()
+
     return (
         <S.Header>
             <FlexWrapper justifyContent="space-between" alignItems="center" height="100%">
                 <FlexWrapper alignItems="center">
-                    <IconButton name="arrow-left" width="20px" height="20px" bgColor={theme.colors.button.background.tertiary} outline={true}/>
+                    <IconButton name="arrow-left" width="20px" height="20px" bgColor={theme.colors.button.background.tertiary} outline={true} onClick={() => navigate(-1)}/>
                     <Icon name="logo-without-text" width="36px" height="36px"/>
                     <FlexWrapper direction="column">
                         <S.Title>Walk-In</S.Title>

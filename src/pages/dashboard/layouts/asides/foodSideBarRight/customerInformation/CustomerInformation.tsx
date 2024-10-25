@@ -4,8 +4,12 @@ import {theme} from "../../../../../../components/styles/Theme";
 import {Field} from "../../../../../../components/field/Field";
 import {Button} from "../../../../../../components/button/Button";
 import {Title} from "../../../../../../components/Title";
+import {useNavigate} from "react-router-dom";
+import {PATHS} from "../../../../../../app/routes";
 
 export const CustomerInformation = () => {
+    const navigate = useNavigate();
+
     return (
         <StyledCustomerInformation>
             <Title>Customer Information</Title>
@@ -14,7 +18,7 @@ export const CustomerInformation = () => {
                 name: "chevron-right",
                 width: "24px",
                 height: "24px",
-                href: "tables"
+                onClick: () => navigate(PATHS.SELECT_TABLE)
             }}/>
             <Button type="submit" backColor={theme.colors.button.background.secondary}
                     textColor={theme.colors.button.text.accent} primary={true} padding="11px 24px">Add note</Button>

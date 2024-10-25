@@ -19,7 +19,7 @@ export const TableSideBarRight = () => {
 };
 
 const StyledTableSideBarRight = styled.aside`
+    height: 100%;
     background-color: ${theme.colors.background.tertiary};
-    grid-area: sideR;
     overflow-y: auto;
 `

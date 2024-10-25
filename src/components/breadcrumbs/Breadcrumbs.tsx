@@ -20,7 +20,6 @@ export const Breadcrumbs : React.FC<{crumbs: Array<string>}> = (props: {crumbs: 
 
 
 const StyledBreadcrumbs = styled.div`
-    grid-area: brc;
     padding: 8px 15px;
     background-color: ${theme.colors.background.primary};
     border-bottom: 1px solid ${theme.colors.background.secondary};
